@@ -227,6 +227,23 @@ int main()
 		new_arr = {3, 3 ^ 10, 3 ^ 10 ^ 5, 3 ^ 10 ^ 5 ^ 25, 3 ^ 10 ^ 5 ^ 25 ^ 2, 3 ^ 10 ^ 5 ^ 25 ^ 2 ^ 8};
 
 		now this become equivalent to find max xor pair in new_arr
+		 int n;
+    		cin>>n;
+    		vector<int>arr(n);
+
+    		for(int i=0;i<n;i++)
+    		{
+        		cin>>arr[i];
+    		}
+
+    		vector<int> prefixXor(n);
+    		prefixXor[0]=arr[0];
+    		for(int i=1;i<n;i++)
+    		{
+        		prefixXor[i]=prefixXor[i-1]^arr[i];
+    		}
+
+    		cout<<findMaximumXOR(prefixXor)<<"\n";
 
 	*/
 
